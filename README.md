@@ -6,7 +6,7 @@
 - В папке form находится файл со скриптом, который используется в гугл форме
 
 Настройка пайплайна:
-Расположите файл .linelint.yml в корневой директории. Создайте папку workflows и поместите туда файл dotnet.yml
+Расположите файл linelint.yml в корневой директории. Создайте папку .github, далее в ней создайте папку workflows и поместите туда файл dotnet.yml
 
 Ссылка на форму:
 https://docs.google.com/forms/d/e/1FAIpQLScrQ1_q1IXwbjKYW9I1vIOGuSUpvJuLM9PFrZ7VpRAvVnrpMg/viewform?usp=sf_link
