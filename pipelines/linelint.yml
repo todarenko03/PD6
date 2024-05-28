@@ -3,10 +3,12 @@ autofix: false
 
 # list of paths to ignore, uses gitignore syntaxes (executes before any rule)
 ignore:
-  - .github/
-  - .linelint.yml
-  - README.md
-  - lcov.info
+  - '*.md'
+  - '*.info'
+  - '*.yml'
+  - '*.txt'
+  - '*.json'
+  - '*.xml'
 
 rules:
   # checks if file ends in a newline character
