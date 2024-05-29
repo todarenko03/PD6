@@ -3,6 +3,7 @@ autofix: false
 
 # list of paths to ignore, uses gitignore syntaxes (executes before any rule)
 ignore:
+  - '.gitignore'
   - '*.md'
   - '*.info'
   - '*.yml'
