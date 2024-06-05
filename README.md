@@ -18,4 +18,4 @@ https://docs.google.com/spreadsheets/d/1Nkq8vOhzg-HbW5NefhoUxLq1zpCberF9O4tKmtBA
 Перейдите в Settings -> Branches -> Add branch protection rules. В Branch name pattern укажите main. Затем установите галочку в поле Lock branch.
 
 Передача прав на репозиторий:
-Перейдите в Settings, пролистайте вниз до группы Danger zone, перейдите в Transfer ownership. В New owner выберите Specify an organization or username и в появившемся поле введите username преподавателя. Далее по указанной инструкции в конце страницы укажите название вашего репозитория и нажмите I understand, transfer thir repository
+Перейдите в Settings, пролистайте вниз до группы Danger zone, перейдите в Transfer ownership. В New owner выберите Specify an organization or username и в появившемся поле введите username преподавателя. Далее по указанной инструкции в конце страницы укажите название вашего репозитория и нажмите I understand, transfer this repository
