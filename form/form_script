@@ -1,0 +1,39 @@
+// Необходимые поля для формы: Выбери группу, ФИО, Номер лабы, Ссылка на работу
+function onFormSubmitProject(e) {
+  var formResponse = e.response;
+  var itemResponses = formResponse.getItemResponses();
+  var dict = {};
+
+  itemResponses.forEach(function(itemResponse) {
+    var item = itemResponse.getItem();
+    var title = item.getTitle();
+    var responseText = itemResponse.getResponse();
+    dict[title] = responseText.toString();
+  });
+
+  var group = dict['Группа'];
+  var labNumber = dict['Лабораторная работа'];
+  var workLink = dict['Ссылка'];
+  var name = dict['ФИО'];
+  var comment = dict['Комментарии'];
+  var type_of_request = dict['Выберите тип Вашего запроса'];
+  
+  // Преобразование даты в нужный формат
+  var currentDate = new Date();
+  // var formattedDate = currentDate.getDate() + " " + getMonthName(currentDate.getMonth());
+
+  AddRecord(name, labNumber, workLink, group, currentDate, type_of_request, comment);
+  // AddRecord(name, labNumber, workLink, group, formattedDate, type_of_request, comment);
+}
+
+function AddRecord(fio, number_of_labs, link, group, formattedDate, type_of_request, comment){
+  var url = 'https://docs.google.com/spreadsheets/d/1Nkq8vOhzg-HbW5NefhoUxLq1zpCberF9O4tKmtBArR0/edit#gid=1452603080';
+  var ss = SpreadsheetApp.openByUrl(url);
+  var dataSheet = ss.getSheetByName(group);
+  dataSheet.appendRow([fio, number_of_labs, link, formattedDate, type_of_request, comment]);
+}
+
+function getMonthName(monthIndex) {
+  var months = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
+  return months[monthIndex];
+}
